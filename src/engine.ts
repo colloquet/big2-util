@@ -7,10 +7,10 @@ function getCardRank(card: CardType) {
 }
 
 export function isConsecutive(numbers: number[]) {
-  return numbers.every((number, i) => {
+  return numbers.every((num, i) => {
     const lastNumber = numbers[numbers.length - 1];
     const nextNumber = numbers[i + 1];
-    return number === lastNumber || nextNumber === number + 1;
+    return num === lastNumber || nextNumber === num + 1;
   });
 }
 
@@ -20,8 +20,7 @@ export function isSameSuit(cards: CardType[]) {
 }
 
 export function isSameNumber(cards: CardType[]) {
-  const { number } = cards[0];
-  return cards.every(card => card.number === number);
+  return cards.every(card => card.number === cards[0].number);
 }
 
 export function getMeta(cards: CardType[]) {

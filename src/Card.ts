@@ -1,8 +1,8 @@
 import { CardType } from "./types";
 
-function Card(number: number, suit: number): CardType {
+function Card(num: number, suit: number): CardType {
   return {
-    number,
+    number: num,
     suit,
   }
 }
