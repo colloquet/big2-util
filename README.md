@@ -46,12 +46,14 @@ const isValid = Big2Engine.validateMove(royalFlush, regularFlush);
 ### Card parameters
 
 | Name | Type | Description |
+| --- | --- | --- |
 | number | number | The card's number, where 1 = A, 11 = J, 12 = Q and 13 = K |
 | suit | number | The card's suit, where 1 = Diamond, 2 = Club, 3 = Heart and 4 = Spade |
 
 ### Big2Engine
 
 | Method | Description |
+| --- | --- |
 | isSingle**(*cards: Card[]*) | Check if player played a single card. |
 | isPair**(*cards: Card[]*) | Check if player played a valid pair. |
 | isThreeOfAKind**(*cards: Card[]*) | Check if player played a valid three of a kind. |
