@@ -23,9 +23,9 @@ test('identify pairs', () => {
 });
 
 test('identify triplets', () => {
-  expect(Big2Engine.isTriplet(single)).toBe(false);
-  expect(Big2Engine.isTriplet(pair)).toBe(false);
-  expect(Big2Engine.isTriplet(triplet)).toBe(true);
+  expect(Big2Engine.isThreeOfAKind(single)).toBe(false);
+  expect(Big2Engine.isThreeOfAKind(pair)).toBe(false);
+  expect(Big2Engine.isThreeOfAKind(triplet)).toBe(true);
 });
 
 test('identify straights', () => {

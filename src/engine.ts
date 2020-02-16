@@ -6,7 +6,7 @@ function getCardRank(card: CardType) {
   return rankMap[card.number] || card.number;
 }
 
-export function isConsecutive(numbers: number[]) {
+function isConsecutive(numbers: number[]) {
   return numbers.every((num, i) => {
     const lastNumber = numbers[numbers.length - 1];
     const nextNumber = numbers[i + 1];
@@ -14,16 +14,16 @@ export function isConsecutive(numbers: number[]) {
   });
 }
 
-export function isSameSuit(cards: CardType[]) {
+function isSameSuit(cards: CardType[]) {
   const { suit } = cards[0];
   return cards.every(card => card.suit === suit);
 }
 
-export function isSameNumber(cards: CardType[]) {
+function isSameNumber(cards: CardType[]) {
   return cards.every(card => card.number === cards[0].number);
 }
 
-export function getMeta(cards: CardType[]) {
+function getMeta(cards: CardType[]) {
   const occurrences = cards.reduce(
     (acc: { [key: number]: number }, cur) => ({
       ...acc,
@@ -47,6 +47,10 @@ export function getMeta(cards: CardType[]) {
   };
 }
 
+function isFive(cards: CardType[]) {
+  return cards.length === 5;
+}
+
 export function isSingle(cards: CardType[]) {
   return cards.length === 1;
 }
@@ -55,12 +59,8 @@ export function isPair(cards: CardType[]) {
   return cards.length === 2 && isSameNumber(cards);
 }
 
-export function isTriplet(cards: CardType[]) {
+export function isThreeOfAKind(cards: CardType[]) {
   return cards.length === 3 && isSameNumber(cards);
-}
-
-export function isFive(cards: CardType[]) {
-  return cards.length === 5;
 }
 
 export function isStraight(cards: CardType[]) {
@@ -97,7 +97,7 @@ export function isCardMorePowerful(card1: CardType, card2: CardType) {
   return card1Score > card2Score;
 }
 
-export function getBiggestCard(cards: CardType[]) {
+function getBiggestCard(cards: CardType[]) {
   return cards.reduce((acc, cur) => (isCardMorePowerful(acc, cur) ? acc : cur));
 }
 
@@ -106,7 +106,7 @@ export function validateCombination(cards: CardType[]) {
     return true;
   }
 
-  if (isSingle(cards) || isPair(cards) || isTriplet(cards)) {
+  if (isSingle(cards) || isPair(cards) || isThreeOfAKind(cards)) {
     return true;
   }
 
@@ -143,8 +143,8 @@ export function validateMove(lastPlayedCards: CardType[], cards: CardType[]) {
     return isCardMorePowerful(cards[0], lastPlayedCards[0]);
   }
 
-  if (isTriplet(lastPlayedCards)) {
-    if (!isTriplet(cards)) {
+  if (isThreeOfAKind(lastPlayedCards)) {
+    if (!isThreeOfAKind(cards)) {
       return false;
     }
 
