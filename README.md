@@ -54,19 +54,19 @@ const isValid = Big2Engine.validateMove(royalFlush, regularFlush);
 
 | Method | Description |
 | --- | --- |
-| isSingle**(*cards: Card[]*) | Check if player played a single card. |
-| isPair**(*cards: Card[]*) | Check if player played a valid pair. |
-| isThreeOfAKind**(*cards: Card[]*) | Check if player played a valid three of a kind. |
-| isThreeOfAKind**(*cards: Card[]*) | Check if player played a valid three of a kind. |
-| isStraight**(*cards: Card[]*) | Check if player played a valid straight. |
-| isFlush**(*cards: Card[]*) | Check if player played a valid flush. |
-| isFullHouse**(*cards: Card[]*) | Check if player played a valid full house. |
-| isFourOfAKind**(*cards: Card[]*) | Check if player played a valid four of a kind. (4 cards with same number plus any other card) |
-| isRoyalFlush**(*cards: Card[]*) | Check if player played a valid royal flush. |
-| isPass**(*cards: Card[]*) | Check if player have passed his/her turn. |
-| isCardMorePowerful**(*card1: Card, card2: Card*) | Check if card 1 is more powerful than card 2. |
-| validateCombination**(*cards: Card[]*) | Check if player played a valid combination. |
-| validateMove**(*lastPlayedCards: Card[], cards: Card[]*) | Compare two sets of cards and check if the move is valid. |
+| isSingle(cards: Card[]) | Check if player played a single card. |
+| isPair(cards: Card[]) | Check if player played a valid pair. |
+| isThreeOfAKind(cards: Card[]) | Check if player played a valid three of a kind. |
+| isThreeOfAKind(cards: Card[]) | Check if player played a valid three of a kind. |
+| isStraight(cards: Card[]) | Check if player played a valid straight. |
+| isFlush(cards: Card[]) | Check if player played a valid flush. |
+| isFullHouse(cards: Card[]) | Check if player played a valid full house. |
+| isFourOfAKind(cards: Card[]) | Check if player played a valid four of a kind. (4 cards with same number plus any other card) |
+| isRoyalFlush(cards: Card[]) | Check if player played a valid royal flush. |
+| isPass(cards: Card[]) | Check if player have passed his/her turn. |
+| isCardMorePowerful(card1: Card, card2: Card) | Check if card 1 is more powerful than card 2. |
+| validateCombination(cards: Card[]) | Check if player played a valid combination. |
+| validateMove(lastPlayedCards: Card[], cards: Card[]) | Compare two sets of cards and check if the move is valid. |
 
 
 ## License
