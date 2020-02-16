@@ -1,6 +1,6 @@
 {
   "name": "big2-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility library for the game Big2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -19,7 +19,9 @@
     "postversion": "git push && git push --tags"
   },
   "repository": "git@github.com:colloquet/big2-util.git",
-  "keywords": ["big2"],
+  "keywords": [
+    "big2"
+  ],
   "author": "Colloque Tsui <colloquet@gmail.com>",
   "license": "MIT",
   "bugs": {
